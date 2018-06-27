@@ -1,0 +1,54 @@
+{
+  "name": "SURTypeGen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src/ --out-dir bin",
+    "start": "npm run build && node bin/app.js | tee out/out.js"
+  },
+  "dependencies": {
+    "@types/babel-generator": "^6.25.2",
+    "@types/babel-types": "^7.0.3",
+    "@types/babylon": "^6.16.3",
+    "@babel/generator": "^7.0.0-beta.51",
+    "babel-plugin-react-docgen": "^1.9.0",
+    "is-var-name": "^2.0.0",
+    "lodash": "^4.17.10",
+    "prettier": "^1.11.1",
+    "react": "^16.4.1",
+    "react-docgen": "^3.0.0-beta11",
+    "recursive-readdir": "^2.2.2",
+    "semantic-ui-react": "^0.81.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.32",
+    "@babel/core": "^7.0.0-beta.35",
+    "@babel/preset-env": "^7.0.0-beta.32",
+    "@babel/preset-flow": "^7.0.0-beta.32",
+    "@babel/types": "^7.0.0-beta.51",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^22.0.4",
+    "babylon": "^6.18.0",
+    "flow-bin": "^0.66.0",
+    "jest": "^22.0.4"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": 8
+          }
+        }
+      ],
+      "@babel/preset-flow"
+    ]
+  }
+}
